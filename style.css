@@ -1,0 +1,51 @@
+:root {
+  --ink: #16203a;
+  --ink-2: #1f2a44;
+  --paper: #f7f8fb;
+  --accent: #2ec4a6;
+  --muted: #5b6478;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.8; }
+h1, h2, h3 { font-weight: 700; }
+h2 { margin-bottom: 2rem; position: relative; padding-inline-start: 1rem; }
+h2::before { content: ""; position: absolute; inset-inline-start: 0; top: .25em; bottom: .25em; width: 4px; background: var(--accent); border-radius: 2px; }
+a { color: var(--ink-2); }
+
+.py-6 { padding-block: 5rem; }
+.alt { background: var(--paper); }
+
+/* Nav */
+.site-nav { background: var(--ink); }
+.site-nav .navbar-brand, .site-nav .nav-link { color: #fff; }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: var(--accent); }
+.site-nav .navbar-toggler { border-color: rgba(255,255,255,.5); }
+.site-nav .navbar-toggler-icon { filter: invert(1); }
+
+/* Hero */
+.hero { background: linear-gradient(160deg, var(--ink), var(--ink-2)); color: #fff; padding: 9rem 0 5rem; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.2; }
+.hero-hello { color: var(--accent); margin: 0; }
+.hero-role { font-size: 1.3rem; color: #c9d3e6; }
+.profile-img { width: 100%; max-width: 260px; aspect-ratio: 1; object-fit: cover; object-position: center 35%; border-radius: 50%; border: 5px solid var(--accent); }
+.btn-accent { background: var(--accent); color: var(--ink); font-weight: 500; }
+.btn-accent:hover { background: #26a88d; color: var(--ink); }
+
+/* Skills */
+.progress { height: .7rem; background: #dde3ee; }
+.progress-bar { background: var(--accent); }
+
+/* Timeline */
+.timeline { list-style: none; padding: 0; border-inline-start: 2px solid var(--accent); }
+.timeline li { padding: 0 1rem .75rem; }
+.timeline span { display: block; color: var(--muted); font-size: .9rem; }
+
+/* Projects */
+.project { border: 1px solid #e3e8f0; border-radius: 10px; overflow: hidden; }
+.project:hover { border-color: var(--accent); }
+.tags { color: var(--muted); font-size: .85rem; direction: ltr; text-align: right; }
+
+.contact-list li { margin-bottom: .5rem; }
+footer { background: var(--ink); color: #c9d3e6; }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
